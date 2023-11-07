@@ -1,5 +1,105 @@
-template-repository (1.0-1) unstable; urgency=medium
+erofs-utils (1.7.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release 1.7.1.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Gao Xiang <xiang@kernel.org>  Fri, 20 Oct 2023 00:00:00 +0800
+
+erofs-utils (1.7-1) unstable; urgency=medium
+
+  * New upstream release 1.7.
+  * Enable DEFLATE compression support.
+
+ -- Gao Xiang <xiang@kernel.org>  Thu, 21 Sep 2023 00:00:00 +0800
+
+erofs-utils (1.6-4) unstable; urgency=medium
+
+  * Drop redundant `pkg-config` Build-Depends.
+  * Rebuild source-only package for migration to testing.
+
+ -- Gao Xiang <xiang@kernel.org>  Sun, 06 Aug 2023 00:00:00 +0800
+
+erofs-utils (1.6-3) unstable; urgency=medium
+
+  * Add erofsfuse binary as package (closes: #1036901).
+  * Add `Origin:` for patches applied to erofs-utils packages.
+  * Update debian/copyright to reflect the source code.
+
+ -- Gao Xiang <xiang@kernel.org>  Fri, 04 Aug 2023 00:00:00 +0800
+
+erofs-utils (1.6-2) unstable; urgency=medium
+
+  * Backport several fixes to improve fsck.erofs stability.
+  * Backport a fix for fragment feature.
+  * Fix CVE-2023-33551 and CVE-2023-33552 vulnerabilities
+    (closes: #1037092).
+
+ -- Gao Xiang <xiang@kernel.org>  Fri, 09 Jun 2023 00:00:00 +0800
+
+erofs-utils (1.6-1) unstable; urgency=medium
+
+  * New upstream release 1.6.
+  * Enable LZMA compression support.
+
+ -- Gao Xiang <xiang@kernel.org>  Sun, 12 Mar 2023 00:00:00 +0800
+
+erofs-utils (1.5-1) unstable; urgency=medium
+
+  * New upstream release 1.5.
+
+ -- Gao Xiang <xiang@kernel.org>  Fri, 17 Jun 2022 00:00:00 +0800
+
+erofs-utils (1.4-1) unstable; urgency=medium
+
+  * New upstream release 1.4.
+
+ -- Gao Xiang <xiang@kernel.org>  Thu, 25 Nov 2021 00:00:00 +0800
+
+erofs-utils (1.3-1) unstable; urgency=medium
+
+  * New upstream release 1.3.
+
+ -- Gao Xiang <xiang@kernel.org>  Thu, 03 Jun 2021 00:00:00 +0800
+
+erofs-utils (1.2.1-2) unstable; urgency=medium
+
+  * Add d/upstream/metadata.
+  * Fix mkfs.erofs that lacks the "bindnow" linker flag.
+  * Need to drop amd64 build for testing migration.
+
+ -- Gao Xiang <xiang@kernel.org>  Wed, 20 Jan 2021 00:00:00 +0800
+
+erofs-utils (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release 1.2.1.
+
+ -- Gao Xiang <xiang@kernel.org>  Tue, 19 Jan 2021 00:00:00 +0800
+
+erofs-utils (1.1-2) unstable; urgency=medium
+
+  * Fix pkg-config package dependency reported by buildd.
+
+ -- Gao Xiang <xiang@kernel.org>  Fri, 24 Apr 2020 12:30:00 +0800
+
+erofs-utils (1.1-1) unstable; urgency=medium
+
+  * New upstream release 1.1.
+
+ -- Gao Xiang <xiang@kernel.org>  Thu, 23 Apr 2020 20:37:00 +0800
+
+erofs-utils (1.0-3) unstable; urgency=medium
+
+  * Add more memory allocation failure handling from upstream.
+
+ -- Gao Xiang <xiang@kernel.org>  Sat, 16 Nov 2019 15:15:18 +0800
+
+erofs-utils (1.0-2) unstable; urgency=low
+
+  * Fix debian/copyright description.
+
+ -- Gao Xiang <xiang@kernel.org>  Mon, 11 Nov 2019 07:57:42 +0800
+
+erofs-utils (1.0-1) unstable; urgency=low
+
+  * Initial release. Closes: #943948
+
+ -- Gao Xiang <xiang@kernel.org>  Thu, 31 Oct 2019 21:01:32 +0800
