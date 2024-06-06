@@ -1,2 +1,3 @@
+usr/lib/*/liberofsfuse.a
 usr/bin/erofsfuse
 usr/share/man/man1/erofsfuse.1

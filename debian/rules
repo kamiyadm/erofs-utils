@@ -16,7 +16,7 @@ COMMON_CONF_FLAGS = --with-uuid --with-selinux --enable-lzma \
 ifneq ($(SKIP_FUSE2FS),)
 COMMON_CONF_FLAGS +=  --disable-fuse
 else
-COMMON_CONF_FLAGS +=  --enable-fuse
+COMMON_CONF_FLAGS +=  --enable-fuse --enable-static-fuse
 endif
 
 %:
@@ -29,5 +29,8 @@ override_dh_auto_configure:
 		${COMMON_CONF_FLAGS}
 
 override_dh_auto_install:
-	find $(CURDIR) -name "*.la" -delete
-	dh_auto_install --
+	dh_auto_install
+	/bin/bash ./libtool --finish $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/
+
+override_dh_missing:
+	dh_missing --fail-missing
