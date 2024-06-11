@@ -32,5 +32,8 @@ override_dh_auto_install:
 	dh_auto_install
 	/bin/bash ./libtool --finish $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/
 
+	rm -r $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/liberofsfuse.la
+	rm -r $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/liberofsfuse.so*
+
 override_dh_missing:
 	dh_missing --fail-missing
